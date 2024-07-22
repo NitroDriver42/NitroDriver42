@@ -1,0 +1,20 @@
+voornaam = input ("voer je naam in: ")
+achternaam = input ("voer je achternaam in: ")
+
+volledige_naam = f" {voornaam} {achternaam}"
+with open("namen.txt", "a") as bestand:
+    # Schrijf de volledige naam naar het bestand
+    bestand.write(volledige_naam + "\n")
+
+#herhaal de vraag voor voornaam + achternaam
+while True:
+    voornaam = input("Voer je voornaam in (of type 'stop' om te stoppen): ")
+    if voornaam.lower() == "stop":
+        break
+    
+    #tot stop word gemeld
+    achternaam = input("Voer je achternaam in (of type 'stop' om te stoppen): ")
+    if achternaam.lower() == "stop":
+        break
+print ("de naam is naar het bestand gezet")
+ 
